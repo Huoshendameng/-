@@ -1,0 +1,9 @@
+<!--components/get-singleselect/get-singleselect.wxml-->
+<view class="text">
+    <textarea
+              placeholder="请输入"
+              placeholder-class="placeholder"
+              cols="30" rows="10"
+              bindinput="textInputHandle"
+    ></textarea>
+</view>

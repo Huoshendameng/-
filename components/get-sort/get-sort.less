@@ -1,0 +1,97 @@
+/* components/get-rate/get-rate.wxss */
+@import '../../utils/mixins';
+.sort{
+	&-item{
+		width: 100%;
+		min-height: 100rpx;
+		display: flex;
+		//flex-flow: row nowrap;
+		justify-content: flex-start;
+		align-items: center;
+		position: relative;
+		&>.i-index{
+			width:45rpx;
+			justify-content: flex-start;
+		}
+		&>image{
+			width: 96rpx;
+			height: 96rpx;
+			border:2px solid #f0f0f8;
+			border-radius: 8rpx;
+			margin:20rpx 20rpx 20rpx 0;
+		}
+		&>text{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size:30rpx;
+		}
+		&:after{
+			content: ' ';
+			position: absolute;
+			width: 100%;
+			background: #f3f4f7;
+			left: 0;
+			bottom:0;
+			height: 2rpx;
+		}
+		&:last-of-type:after{
+			display: none;
+		}
+	}
+	&-icon{
+		display: flex;
+		flex-flow: row nowrap;
+		margin-right: 30rpx;
+		&>view{
+			width: 60rpx;
+			height: 60rpx;
+			border: 1rpx solid #CCCCCC;
+			.border-radius(4rpx);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			&>view{
+				height: 10rpx;
+				width: 18rpx;
+			}
+		}
+		&-up{
+			&>view{
+				.view-bg(move-up);
+			}
+		}
+		&-down{
+			margin-left: -1rpx;
+			&>view{
+				.view-bg(move-down);
+			}
+		}
+	}
+	&-hover{
+		background: #f5f5f5;
+	}
+	.sort-text{
+		width:30%;
+	}
+	.sort-icon{
+		align-self: flex-end;
+		margin-left: auto;
+		margin-bottom:auto;
+		margin-top:auto;
+	}
+	&-item:first-of-type{
+		.sort-icon{
+			&-up{
+				display: none;
+			}
+		}
+	}
+	&-item:last-of-type{
+		.sort-icon{
+			&-down{
+				display: none;
+			}
+		}
+	}
+}

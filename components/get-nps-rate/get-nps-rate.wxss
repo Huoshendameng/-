@@ -1,0 +1,82 @@
+/* components/get-rate/get-rate.wxss */
+/*
+20171018 duqichao added
+*/
+/*start*/
+/*end*/
+.rate-box .desc-1 {
+  color: #000000;
+  font-size: 30rpx;
+  margin-top: 80rpx;
+  margin-bottom: 38rpx;
+}
+.rate-box .desc-2 {
+  text-align: right;
+  color: #000000;
+  font-size: 30rpx;
+  margin-top: 40rpx;
+  margin-bottom: 35rpx;
+  padding-right: 30rpx;
+}
+.rate-box .row-1,
+.rate-box .row-2 {
+  display: flex;
+}
+.rate-box .row-1 {
+  display: flex;
+  margin-bottom: 8rpx;
+  margin-right: 30rpx;
+}
+.rate-box .row-1 .rate-item:first-child::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 14rpx;
+  height: 14rpx;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transform-origin: 50% 50%;
+  background-color: #f3f4f7;
+}
+.rate-box .row-2 {
+  display: flex;
+  margin-right: 30rpx;
+}
+.rate-box .row-2 .rate-item:nth-last-child(2)::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 14rpx;
+  height: 14rpx;
+  transform: translate(-50%, 50%) rotate(45deg);
+  transform-origin: 50% 50%;
+  background-color: #f3f4f7;
+}
+.rate-box .rate-item {
+  /*display: flex;
+		justify-content: center;
+		align-items: center;*/
+  flex: 1;
+  text-indent: 0;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 80rpx;
+  position: relative;
+  height: 80rpx;
+  width: 70rpx;
+  margin-right: 6rpx;
+  border-radius: 4rpx;
+  background-color: #f3f4f7;
+  font-size: 30rpx;
+  color: #9ea5ba;
+}
+.rate-box .rate-item:last-child {
+  margin-right: 0;
+}
+.rate-box .rate-item.tail {
+  visibility: hidden;
+}
+.rate-box .rate-item.tail::after {
+  visibility: hidden;
+}

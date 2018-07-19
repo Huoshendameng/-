@@ -1,0 +1,13 @@
+/* components/get-rate/get-rate.wxss */
+.text {
+  display: block;
+  margin-right: 30rpx;
+}
+.text textarea {
+  padding-top: 30rpx;
+  width: 100%;
+  font-size: 30rpx;
+}
+.text .placeholder {
+  color: #c3c7d3;
+}

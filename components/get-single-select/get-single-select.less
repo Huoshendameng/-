@@ -1,0 +1,52 @@
+/* components/get-progress/get-progress.wxss */
+.single{
+    font-size: 30rpx;
+    radio-group{
+        display: flex;
+        flex-flow: column nowrap;
+        &>label{
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            position: relative;
+            min-height: 110rpx;
+            justify-content: flex-start;
+            line-height: 42rpx;
+            radio{
+                margin-right: 20rpx;
+            }
+            &>image{
+                width: 96rpx;
+                height: 96rpx;
+                border:2rpx solid #f0f0f8;
+                border-radius: 8rpx;
+                margin:20rpx 20rpx 20rpx 0;
+            }
+            &>text{
+                min-width: 80rpx;
+                word-break:break-all;
+                padding:20rpx 0;
+            }
+            &>input{
+                border-bottom: #c3c7d3 2rpx solid;
+                width: 70%;
+                height: 60rpx;
+            }
+            &:after{
+                content:' ';
+                height: 2rpx;
+                width:100%;
+                position: absolute;
+                bottom: 0;
+                background: #f0f0f8;
+                left: 80rpx;
+            }
+            &:last-of-type:after{
+                display: none;
+            }
+            &.full:after{
+                left: 0rpx;
+            }
+        }
+    }
+}

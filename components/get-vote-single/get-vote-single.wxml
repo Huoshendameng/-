@@ -1,0 +1,20 @@
+<view class="vote-single {{isImage==true?'imageLayout':''}}">
+    <radio-group bindchange="radioChange">
+        <view wx:for="{{items}}" wx:key="{{index}}" class="item">
+            <label class="select">
+                <image wx:if="{{['',undefined].indexOf(item.imgSrcUrl)!=-1}}" class="imageBackground" src="{{item.imgSrcUrl}}"></image>
+                <radio checked="{{item.selected}}" value="{{item.id}}" color="{{color}}"></radio>
+                <text class="text">{{item.questionContent}}</text>
+            </label>
+            <view wx:if="{{showResult}}">
+                <progress percent="{{item.rate}}" activeColor="{{item.selected?color:'#9ea5ba'}}" backgroundColor="rgba(158,165,186,0.1)" active="true"></progress>
+                <view class="result"><view class="rate">{{item.rate}}%</view><view class="ticket">{{item.numbers}} 票</view>
+                    <view data-an="{{anonymousFlag}}" wx:if="{{anonymousFlag!=2}}" class="people">
+                        <image wx:if="{{index<5}}" class="people-image" wx:for="{{item.image}}" wx:key="{{index}}" src="{{item.avatarUrl}}"></image>
+                        <image wx:if="{{item.image.length>4}}" class="more" src="http://storage.360buyimg.com/wx-program/wx-survey/1.0.0/vote/vote-more.png"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </radio-group>
+</view>

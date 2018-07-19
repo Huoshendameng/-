@@ -1,0 +1,49 @@
+/* components/get-progress/get-progress.wxss */
+.multi {
+  font-size: 30rpx;
+}
+.multi checkbox-group {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.multi checkbox-group > label {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  position: relative;
+  min-height: 110rpx;
+}
+.multi checkbox-group > label checkbox {
+  margin-right: 20rpx;
+}
+.multi checkbox-group > label > image {
+  width: 96rpx;
+  height: 96rpx;
+  border: 2rpx solid #f0f0f8;
+  border-radius: 8rpx;
+  margin: 20rpx 20rpx 20rpx 0;
+}
+.multi checkbox-group > label > text {
+  min-width: 80rpx;
+  word-break: break-all;
+}
+.multi checkbox-group > label > input {
+  border-bottom: #c3c7d3 2rpx solid;
+  width: 70%;
+  height: 60rpx;
+}
+.multi checkbox-group > label:after {
+  content: ' ';
+  height: 2rpx;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: #f0f0f8;
+  left: 80rpx;
+}
+.multi checkbox-group > label:last-of-type:after {
+  display: none;
+}
+.multi checkbox-group > label.full:after {
+  left: 0rpx;
+}

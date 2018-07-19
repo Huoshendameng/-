@@ -1,0 +1,10 @@
+<!--components/get-progress/get-progress.wxml-->
+<view class="bottom" style="bottom:{{bottom}}">
+    <view class="bottom-left" style="margin-left: {{margin}};background-color:{{lineColor}}"></view>
+    <view class="bottom-content">
+        <view wx:key="{{index}}" wx:for="{{bottomData}}">
+            <view style="color:{{fontColor}}" bindtap="bindClickHandle" data-route="{{item.route}}">{{item.content}}</view><text wx:if="{{bottomData.length!=1&&index<bottomData.length-1}}" style="color:{{lineColor}}">|</text>
+        </view>
+    </view>
+    <view class="bottom-right" style="margin-right: {{margin}};background-color:{{lineColor}}"></view>
+</view>

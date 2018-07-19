@@ -1,0 +1,129 @@
+.vote-multi .item{
+    box-shadow: rgba(136,144,169,.2) 0 10rpx 40rpx;
+    margin-bottom: 30rpx;
+    -webkit-border-radius: 8rpx;
+    -moz-border-radius: 8rpx;
+    border-radius: 8rpx;
+}
+.vote-multi .imageBackground{
+    display: none;
+}
+.vote-multi .item>.select{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 32rpx 40rpx;
+}
+.vote-multi .item>.select>checkbox{
+    margin-top:-8rpx
+}
+.vote-multi .item>.select>.text{
+     margin-left: 20rpx;
+     font-size: 30rpx;
+ }
+.vote-multi .item>view>.result{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    font-size: 26rpx;
+    padding:30rpx 0 20rpx 40rpx;
+}
+.vote-multi .item>view>.result>.rate{
+    color: #000000;
+    position: relative;
+    margin-right: 20rpx;
+}
+.vote-multi .item>view>.result>.rate:after{
+    content:' ';
+    position: absolute;
+    right: -10rpx;
+    width: 2rpx;
+    height: 60%;
+    background: #e5e5e5;
+    top: 20%;
+}
+.vote-multi .item>view>.result>.ticket{
+    color: #a6a6a6;
+}
+.vote-multi .item>view>progress{
+    padding:0 40rpx 0 40rpx;
+}
+.vote-multi .item>view>.result>.people{
+    position: absolute;
+    right: 40rpx;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.vote-multi .item>view>.result>.people>image{
+    height: 45rpx;
+    width: 45rpx;
+    margin-left: 10rpx;
+    margin-top: 10rpx;
+    -webkit-border-radius: 45rpx;
+    -moz-border-radius: 45rpx;
+    border-radius: 45rpx;
+}
+.vote-multi .item>view>.result>.people>.more{
+    height: 45rpx;
+    width: 45rpx;
+    color: #eeeeee;
+    margin-left: 0rpx;
+}
+
+/*图片样式*/
+.imageLayout .item>view>.result>.ticket{
+    color: #000000;
+}
+.imageLayout>checkbox-group{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.imageLayout>checkbox-group>.item{
+    width: 320rpx;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    position: relative;
+    -webkit-border-radius: 8rpx;
+    -moz-border-radius: 8rpx;
+    border-radius: 8rpx;
+}
+.imageLayout>checkbox-group>.item>.select>.imageBackground{
+    display: block;
+    height: 320rpx;
+    width: 320rpx;
+    border-top-left-radius: 8rpx;
+    border-top-right-radius: 8rpx;
+}
+.imageLayout>checkbox-group>.item>.select{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: start;
+    padding: 0;
+}
+.imageLayout>checkbox-group>.item>.select>checkbox{
+    position: absolute;
+    top: 30rpx;
+    left: 30rpx;
+    z-index: 1000;
+}
+.imageLayout>checkbox-group>.item>.select>.text{
+    margin: 0;
+    padding: 32rpx 40rpx;
+}
+.imageLayout .people .more{
+    margin-top: 10rpx;
+}
+.imageLayout .people-image{
+    display: none;
+}
+.imageLayout .more{
+    display: none;
+}

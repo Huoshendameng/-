@@ -1,0 +1,28 @@
+<!--components/get-singleselect/get-singleselect.wxml-->
+<view
+        class="rate-box nps"
+>
+    <view class="desc-1">{{items[0].questionLibDesc}}</view>
+    <view class="row-1">
+        <view
+                class="rate-item"
+                wx:key="{{index}}"
+                wx:if = "{{index < 6 }}"
+                wx:for="{{items}}"
+                data-index="{{index}}"
+                bindtap="itemClickHandle"
+        >{{items.length==11?index:''}}</view>
+    </view>
+    <view class="row-2">
+        <view
+                class="rate-item"
+                wx:key="{{index}}"
+                wx:if = "{{index >= 6 }}"
+                wx:for="{{items}}"
+                data-index="{{index}}"
+                bindtap="itemClickHandle"
+        >{{items.length==11?index:''}}</view>
+        <view  class="rate-item tail"></view>
+    </view>
+    <view class="desc-2">{{items[10].questionLibDesc}}</view>
+</view>

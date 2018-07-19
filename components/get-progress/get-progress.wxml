@@ -1,0 +1,4 @@
+<!--components/get-progress/get-progress.wxml-->
+<view class="progress" style="height:{{strokeWidth}}; background-color: {{backgroundColor}};margin: {{margin}};">
+    <view class="inner" style="width:{{percent}}%; background-color: {{activeColor}}; transition-duration: {{animationTime}}"></view>
+</view>

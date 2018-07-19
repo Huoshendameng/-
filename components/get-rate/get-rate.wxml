@@ -1,0 +1,20 @@
+<!--components/get-singleselect/get-singleselect.wxml-->
+<view class="{{items.length == 5 ? 'rate-container':''}}">
+    <view class="rate-title">
+        <view >{{items[0].questionLibDesc}}</view>
+        <view >{{items[items.length-1].questionLibDesc}}</view>
+    </view>
+    <view
+            class="{{items.length == 5 ? 'rate-box rate ':'rate-box nps ' + compose}}"
+    >
+
+        <view
+                class="{{item.active ? 'rate-item star-active':'rate-item star'}}"
+                wx:key="{{index}}"
+                wx:for="{{items}}"
+                data-index="{{index}}"
+                bindtap="itemClickHandle"
+        >{{items.length==11?index:''}}<!--<view wx:if="{{index==(items.length-1)}}" class="rate-title rate-title-last">{{item.questionLibDesc}}</view>--><view wx:if="{{index==(items.length-1)}}" class="arrow arrow-last"></view>
+        </view>
+    </view>
+</view>

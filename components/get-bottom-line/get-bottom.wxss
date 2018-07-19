@@ -1,0 +1,49 @@
+/* components/get-progress/get-progress.wxss */
+.bottom{
+    display:-webkit-flex;
+    display:flex;
+    -webkit-align-items:center;
+    align-items:center;
+    justify-content: center;
+    position: absolute;
+    bottom: 60rpx;
+    width: 100%;
+    height: 2rpx;
+    left:0;
+}
+.bottom-left{
+    width: 100%;
+    height: 2rpx;
+    margin-left: 40rpx;
+    background: rgba(255,255,255,.2);
+}
+.bottom-right{
+    width: 100%;
+    height: 2rpx;
+    margin-right: 40rpx;
+    background: rgba(255,255,255,.2);
+}
+.bottom-content{
+    display: flex;
+    flex-flow: row nowrap;
+    color: #FFFFFF;
+    justify-content: center;
+    align-items: center;
+}
+.bottom-content>view{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.bottom-content>view>text{
+    font-size: 26rpx;
+    color: rgba(255,255,255,.2);
+}
+.bottom-content>view>view{
+    color: #FFFFFF;
+    font-size: 26rpx;
+    color: rgba(255,255,255,.6);
+    white-space: nowrap;
+    margin:0 20rpx;
+}

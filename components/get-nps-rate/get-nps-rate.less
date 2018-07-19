@@ -1,0 +1,79 @@
+/* components/get-rate/get-rate.wxss */
+@import "../../utils/mixins";
+.rate-box{
+	.desc-1{
+		color: #000000;
+		font-size: 30rpx;
+		margin-top: 80rpx;
+		margin-bottom: 38rpx;
+	}
+	.desc-2{
+		text-align: right;
+		color: #000000;
+		font-size: 30rpx;
+		margin-top: 40rpx;
+		margin-bottom: 35rpx;
+		padding-right: 30rpx;
+	}
+	.row-1,.row-2{
+		display: flex;
+	}
+	.row-1{
+		display: flex;
+		margin-bottom: 8rpx;
+		margin-right: 30rpx;
+		.rate-item:first-child::after{
+			content: '';
+			position: absolute;
+			left: 50%;
+			top:0;
+			width: 14rpx;
+			height: 14rpx;
+			transform: translate(-50%,-50%) rotate(45deg);
+			transform-origin: 50% 50%;
+			background-color: #f3f4f7;
+		}
+	}
+	.row-2{
+		display: flex;
+		margin-right: 30rpx;
+		.rate-item:nth-last-child(2)::after{
+			content: '';
+			position: absolute;
+			left: 50%;
+			bottom:0;
+			width: 14rpx;
+			height: 14rpx;
+			transform: translate(-50%,50%) rotate(45deg);
+			transform-origin: 50% 50%;
+			background-color: #f3f4f7;
+		}
+	}
+	.rate-item{
+		/*display: flex;
+		justify-content: center;
+		align-items: center;*/
+		flex: 1;
+		text-indent: 0;
+		letter-spacing:0;
+		text-align: center;
+		line-height: 80rpx;
+		position: relative;
+		height:80rpx;
+		width:70rpx;
+		margin-right:  6rpx;
+		border-radius: 4rpx;
+		background-color: #f3f4f7;
+		font-size: 30rpx;
+		color: #9ea5ba;
+		&:last-child{
+			margin-right: 0;
+		}
+		&.tail{
+			visibility: hidden;
+			&::after{
+				visibility: hidden;
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+<!--components/get-single-select/get-single-select.wxml-->
+<view class="single external">
+    <radio-group class="single" bindchange="radioChange">
+        <label class="radio {{isFullBorder?'full':''}}" wx:for="{{items}}" wx:key="index">
+            <radio value="{{item.id}}" color="#2e5aff"/>
+            <image mode="aspectFill" data-index="{{index}}" bindtap="viewImg" wx:if="{{item.imgSrcUrl}}" src="{{item.imgSrcUrl}}"></image>
+            <!--翻页题-->
+            <block wx:if="{{type == 1}}">
+                <text wx:if="{{item.imgSrcUrl}}" style="width:{{item.otherBankItemFlag==1?0:380}}rpx;">{{item.isOther?'其他':item.questionContent}}</text>
+                <text wx:if="{{!item.imgSrcUrl}}" style="width:{{item.otherBankItemFlag==1?0:400}}rpx;">{{item.isOther?'其他':item.questionContent}}</text>
+                <input wx:if="{{item.imgSrcUrl && item.otherBankItemFlag==1}}" style="width:280rpx;" type="text" data-index="{{index}}" bindinput="inputChange"/>
+                <input wx:if="{{!item.imgSrcUrl && item.otherBankItemFlag==1}}" style="width:400rpx;" type="text" data-index="{{index}}" bindinput="inputChange"/>
+            </block>
+            <!--对话题-->
+            <block wx:if="{{type == 2}}">
+                <text wx:if="{{item.imgSrcUrl}}" style="width:{{item.otherBankItemFlag==1?0:280}}rpx;">{{item.isOther?'其他':item.questionContent}}</text>
+                <text wx:if="{{!item.imgSrcUrl}}" style="width:{{item.otherBankItemFlag==1?0:400}}rpx;">{{item.isOther?'其他':item.questionContent}}</text>
+                <input wx:if="{{item.imgSrcUrl && item.otherBankItemFlag==1}}" style="width:190rpx;" type="text" data-index="{{index}}" bindinput="inputChange"/>
+                <input wx:if="{{!item.imgSrcUrl && item.otherBankItemFlag==1}}" style="width:300rpx;" type="text" data-index="{{index}}" bindinput="inputChange"/>
+            </block>
+        </label>
+    </radio-group>
+</view>

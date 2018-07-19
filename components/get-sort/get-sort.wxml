@@ -1,0 +1,25 @@
+<!--components/get-singleselect/get-singleselect.wxml-->
+<view class="sort">
+    <view class="sort-item" wx:for="{{items}}" wx:key="{{index}}">
+        <text class="i-index" space="true"><text style="color: #a6a6a6">{{index < 9 ? '0'+(index+1) : index+1  }}</text></text><image mode="aspectFill" data-index="{{index}}" bindtap="viewImg" wx:if="{{item.imgSrcUrl}}" src="{{item.imgSrcUrl}}"></image>
+        <view wx:if="{{item.imgSrcUrl}}" style="width:200rpx;" class="sort-text">{{item.questionContent}}</view>
+        <view wx:else class="sort-text">{{item.questionContent}}</view>
+        <view class="sort-icon">
+            <view
+                    hover-class="sort-hover"
+                    class="sort-icon-up"
+                    data-index="{{index}}"
+                    bindtap="sortUpClick"
+            >
+                <view></view>
+            </view>
+            <view
+                    hover-class="sort-hover"
+                    class="sort-icon-down"
+                    data-index="{{index}}"
+                    bindtap="sortDownClick">
+                <view></view>
+            </view>
+        </view>
+    </view>
+</view>

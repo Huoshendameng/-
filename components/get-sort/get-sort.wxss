@@ -1,0 +1,96 @@
+/* components/get-rate/get-rate.wxss */
+/*
+20171018 duqichao added
+*/
+/*start*/
+/*end*/
+.sort-item {
+  width: 100%;
+  min-height: 100rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+.sort-item > .i-index {
+  width: 45rpx;
+  justify-content: flex-start;
+}
+.sort-item > image {
+  width: 96rpx;
+  height: 96rpx;
+  border: 2px solid #f0f0f8;
+  border-radius: 8rpx;
+  margin: 20rpx 20rpx 20rpx 0;
+}
+.sort-item > text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+}
+.sort-item:after {
+  content: ' ';
+  position: absolute;
+  width: 100%;
+  background: #f3f4f7;
+  left: 0;
+  bottom: 0;
+  height: 2rpx;
+}
+.sort-item:last-of-type:after {
+  display: none;
+}
+.sort-icon {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-right: 30rpx;
+}
+.sort-icon > view {
+  width: 60rpx;
+  height: 60rpx;
+  border: 1rpx solid #CCCCCC;
+  border-radius: 4rpx;
+  -moz-border-radius: 4rpx;
+  -webkit-border-radius: 4rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sort-icon > view > view {
+  height: 10rpx;
+  width: 18rpx;
+}
+.sort-icon-up > view {
+  background: url("//storage.360buyimg.com/wx-program/wx-survey/1.0.0/survey-view/move-up.png?id=6") no-repeat;
+  background-position: center center;
+  background-size: contain contain;
+  -webkit-background-size: contain, contain;
+}
+.sort-icon-down {
+  margin-left: -1rpx;
+}
+.sort-icon-down > view {
+  background: url("//storage.360buyimg.com/wx-program/wx-survey/1.0.0/survey-view/move-down.png?id=6") no-repeat;
+  background-position: center center;
+  background-size: contain contain;
+  -webkit-background-size: contain, contain;
+}
+.sort-hover {
+  background: #f5f5f5;
+}
+.sort .sort-text {
+  width: 30%;
+}
+.sort .sort-icon {
+  align-self: flex-end;
+  margin-left: auto;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+.sort-item:first-of-type .sort-icon-up {
+  display: none;
+}
+.sort-item:last-of-type .sort-icon-down {
+  display: none;
+}

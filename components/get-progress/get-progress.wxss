@@ -1,0 +1,17 @@
+/* components/get-progress/get-progress.wxss */
+.progress{
+    display:-webkit-flex;
+    display:flex;
+    -webkit-align-items:center;
+    align-items:center;
+    height: 6rpx;
+    background-color: #ccc;
+}
+
+.progress .inner{
+    height: 100%;
+    background-color: #2e5aff;
+    transition-property: width;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.5s;
+}
